@@ -32,15 +32,15 @@ We describe marker features using two approaches: first, we describe the marker 
 
 Categorical variables were described using frequency tables and barplots. Numerical variables were described using measurements of central tendency and dispersion, histograms, and density plots.
 
-## Association analysis (only invasive cases)
-For the association analysis we included only the invasive cases (i.e., cases in which the TMA spot evaluated showed tumor cells). The marker values were compared considering clinical, preoperative, pathologic, treatment, and outcome features. In this context, marker values were considered as the outcome variables and the aforementioned features as the predictor variables. Variables were described using measurements of central tendency and dispersion, boxplots, and density plots.
+## Association analysis
+For association analyses we included only the invasive cases (i.e., cases in which the TMA spot evaluated showed tumor cells). The marker values were compared considering clinical, preoperative, pathologic, treatment, and outcome features. In this context, marker values were considered as the outcome variables and the aforementioned features as the predictor variables. Variables were described using measurements of central tendency and dispersion, boxplots, and density plots.
 
 For each feature (extent, intensity and H-score), either the median or the maximum value was used for the analysis. Thus, the association analysis was carried out by [median percentage](association_ext_med.html), [maximum percentage](association_ext_max.html), [median intensity](association_int_med.html), [maximum intensity](association_int_max.html), [median H-score](association_h_med.html), and [maximum H-score]((association_h_max.html).
 
 The association was evaluated using either the [Mann-Whitney U test for the sum of ranks](https://en.wikipedia.org/wiki/Mann-Whitney_U_test) or the [Kruskal-Wallis rank sum test](https://en.wikipedia.org/wiki/Kruskal-Wallis_one-way_analysis_of_variance), depending on the features of the predictor variables.
 
 ## Outcome analysis (only invasive cases)
-The outcome analysis included [regression modeling](outcome_regression.html) and [survival analysis](outcome_survival.html). For each feature (extent, intensity and H-score), each case was categorized as showing high or low expression using the median values of the feature grouped in 2 levels, considering either the absence (i.e., zero value) or the median value of the feature distribution.
+For outcome analyses we included only the invasive cases (i.e., cases in which the TMA spot evaluated showed tumor cells). The outcome analysis included [regression modeling](outcome_regression.html) and [survival analysis](outcome_survival.html). For each feature (extent, intensity and H-score), each case was categorized as showing high or low expression using the median values of the feature grouped in 2 levels, considering either the absence (i.e., zero value) or the median value of the feature distribution.
 
 Outcome variables included distant metastasis, tumor progression, overall mortality, and cancer-related mortality.
 

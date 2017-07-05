@@ -6,7 +6,8 @@ opts_chunk$set(
   fig.align="center"
 )
 
-library(tidyverse)
+library(ggplot2)
+library(dplyr)
 library(simpleR)
 
 load("../Data/DF.Rdata")

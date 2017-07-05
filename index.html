@@ -261,9 +261,9 @@ $(document).ready(function () {
 </div>
 <div id="data-analysis" class="section level1 tabset tabset-pills tabset-fade">
 <h1>Data analysis</h1>
-<p>Data analysis was carried out using 3 approaches: descriptive analysis, association analysis, and outcome analysis. Data was analyzed and plots were generated using R version 3.4.1 (2017-06-30) from the R Foundation for Statistical Computing (Vienna, Austria). R packages from the <a href="https://cran.r-project.org/web/packages/tidyverse/index.html">tidyverse</a> were extensively used.</p>
+<p>Data analysis was carried out using 3 approaches: descriptive analysis, association analysis, and outcome analysis. Data was analyzed and plots were generated using R version 3.4.0 (2017-04-21) from the R Foundation for Statistical Computing (Vienna, Austria). R packages from the <a href="https://cran.r-project.org/web/packages/tidyverse/index.html">tidyverse</a> were extensively used.</p>
 <ul>
-<li><strong>Last updated:</strong> Wed Jul 05 08:05:26 2017</li>
+<li><strong>Last updated:</strong> Wed Jul 05 12:01:10 2017</li>
 </ul>
 <p> </p>
 <div id="descriptive-analysis" class="section level2">
@@ -273,15 +273,15 @@ $(document).ready(function () {
 <p>We describe marker features using two approaches: first, we describe the marker expression considering <a href="descriptive_marker.html">all TMA spots</a>; then, we summarized marker expression by cases (i.e., patients), using either the median or the maximum value of the considered feature.</p>
 <p>Categorical variables were described using frequency tables and barplots. Numerical variables were described using measurements of central tendency and dispersion, histograms, and density plots.</p>
 </div>
-<div id="association-analysis-only-invasive-cases" class="section level2">
-<h2>Association analysis (only invasive cases)</h2>
-<p>For the association analysis we included only the invasive cases (i.e., cases in which the TMA spot evaluated showed tumor cells). The marker values were compared considering clinical, preoperative, pathologic, treatment, and outcome features. In this context, marker values were considered as the outcome variables and the aforementioned features as the predictor variables. Variables were described using measurements of central tendency and dispersion, boxplots, and density plots.</p>
+<div id="association-analysis" class="section level2">
+<h2>Association analysis</h2>
+<p>For association analyses we included only the invasive cases (i.e., cases in which the TMA spot evaluated showed tumor cells). The marker values were compared considering clinical, preoperative, pathologic, treatment, and outcome features. In this context, marker values were considered as the outcome variables and the aforementioned features as the predictor variables. Variables were described using measurements of central tendency and dispersion, boxplots, and density plots.</p>
 <p>For each feature (extent, intensity and H-score), either the median or the maximum value was used for the analysis. Thus, the association analysis was carried out by <a href="association_ext_med.html">median percentage</a>, <a href="association_ext_max.html">maximum percentage</a>, <a href="association_int_med.html">median intensity</a>, <a href="association_int_max.html">maximum intensity</a>, <a href="association_h_med.html">median H-score</a>, and [maximum H-score]((association_h_max.html).</p>
 <p>The association was evaluated using either the <a href="https://en.wikipedia.org/wiki/Mann-Whitney_U_test">Mann-Whitney U test for the sum of ranks</a> or the <a href="https://en.wikipedia.org/wiki/Kruskal-Wallis_one-way_analysis_of_variance">Kruskal-Wallis rank sum test</a>, depending on the features of the predictor variables.</p>
 </div>
 <div id="outcome-analysis-only-invasive-cases" class="section level2">
 <h2>Outcome analysis (only invasive cases)</h2>
-<p>The outcome analysis included <a href="outcome_regression.html">regression modeling</a> and <a href="outcome_survival.html">survival analysis</a>. For each feature (extent, intensity and H-score), each case was categorized as showing high or low expression using the median values of the feature grouped in 2 levels, considering either the absence (i.e., zero value) or the median value of the feature distribution.</p>
+<p>For outcome analyses we included only the invasive cases (i.e., cases in which the TMA spot evaluated showed tumor cells). The outcome analysis included <a href="outcome_regression.html">regression modeling</a> and <a href="outcome_survival.html">survival analysis</a>. For each feature (extent, intensity and H-score), each case was categorized as showing high or low expression using the median values of the feature grouped in 2 levels, considering either the absence (i.e., zero value) or the median value of the feature distribution.</p>
 <p>Outcome variables included distant metastasis, tumor progression, overall mortality, and cancer-related mortality.</p>
 <p>Odds ratios were estimated using unconditional binary <a href="https://en.wikipedia.org/wiki/Logistic_regression">logistic regression</a>. Hazard ratios were estimated using <a href="https://en.wikipedia.org/wiki/Proportional_hazards_model">Cox’s proportional hazards regression</a>. Survival curves were built using the <a href="https://en.wikipedia.org/wiki/Kaplan-Meier_estimator">Kapplan-Meier estimator</a> and compared using the <a href="https://en.wikipedia.org/wiki/Log-rank_test">log-rank test</a>.</p>
 </div>
