@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "name: \"PAICS_Bladder\"\noutput_dir: \".\"\n\noutput:\n  html_document:\n    theme: cosmo\n    css: style.css\n\nnavbar:\n  title: \"PAICS in bladder cancer\"\n  left:\n    - text: \"Descriptive analysis\"\n      menu:\n        - text: \"Clinicopathologic features\"\n          href: descriptive_cpo.html\n        - text: \"Marker expression features\"\n          href: descriptive_marker.html\n    - text: \"Association analysis\"\n      menu:\n        - text: \"By median extent\"\n          href: association_ext_med.html\n        - text: \"By maximum extent\"\n          href: association_ext_max.html\n        - text: \"By median intensity\"\n          href: association_int_med.html\n        - text: \"By maximum intensity\"\n          href: association_ext_max.html\n        - text: \"By median H-score\"\n          href: association_ext_med.html\n        - text: \"By maximum H-score\"\n          href: association_ext_max.html\n    - text: \"Outcome analysis\"\n      menu:\n        - text: \"Regression analysis\"\n          href: outcome_regression.html\n        - text: \"Survival curves\"\n          href: outcome_survival.html",
+    "created" : 1498835503630.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3682524032",
+    "id" : "6E3E9F17",
+    "lastKnownWriteTime" : 1499193880,
+    "last_content_update" : 1499193880044,
+    "path" : "D:/OneDrive/research-files/data-analysis/soory-Bladder/Report/_site.yml",
+    "project_path" : "_site.yml",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}

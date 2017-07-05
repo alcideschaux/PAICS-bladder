@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"PAICS in bladder cancer\"\n---\n\n- **Last updated:** `r date()`\n\n# Data analysis outline\n- Descriptive analysis\n    + Clinicopathologic, treatment and outcome features\n    + Marker features\n        - By TMA spots\n        - By cases\n- Association analysis (only invasive cases)\n    + By median percentage\n    + By maximum percentage\n    + By median intensity\n    + By maximum intensity\n    + By median H-score\n    + By maximum H-score\n- Outcome analysis (only invasive cases)\n    + Regression analysis\n        - Using 0 as the cutoff point\n        - Using the median as the cutoff point\n    + Survival curves\n        - Using 0 as the cutoff point\n        - Using the median as the cutoff point\n",
+    "created" : 1498835473081.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2718700154",
+    "id" : "FE79AEB7",
+    "lastKnownWriteTime" : 1499092759,
+    "last_content_update" : 1499092759754,
+    "path" : "D:/OneDrive/research-files/data-analysis/soory-Bladder/Report/index.Rmd",
+    "project_path" : "index.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

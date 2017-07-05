@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "```{r Global, echo=FALSE, warning=FALSE, message=FALSE}\nsource(\"Global.R\")\n```\n\n\\   \n\n# Marker features {.tabset .tabset-pills .tabset-fade}\n## By TMA spots {.tabset .tabset-pills .tabset-fade}\n### Marker extent\n```{r PAICS_extent}\nx <- marker$PAICS_extent\ng_nice(x, bin = 10)\ntbl_nice(x)\n```\n\n### Marker intensity\n```{r PAICS_intensity}\nx <- marker$PAICS_intensity\ng_nice(x)\ntbl_nice(x)\n```\n\n### Marker H-score\n```{r PAICS_h}\nx <- marker$PAICS_h\ng_nice(x, bin = 25)\ntbl_nice(x)\n```\n\n***\n\n## By SP cases {.tabset .tabset-pills .tabset-fade}\n### Summarizing by the median value {.tabset .tabset-pills .tabset-fade}\n#### Marker extent\n```{r PAICS_ext_med}\nx <- DF$PAICS_ext_med\ng_nice(x, bin = 10)\ntbl_nice(x)\n```\n\n#### Marker intensity\n```{r PAICS_int_med}\nx <- factor(DF$PAICS_int_med)\ng_nice(x)\ntbl_nice(x)\n```\n\n#### Marker H-score\n```{r PAICS_h_med}\nx <- DF$PAICS_h_med\ng_nice(x, bin = 25)\ntbl_nice(x)\n```\n\n### Summarizing by the maximum value {.tabset .tabset-pills .tabset-fade}\n#### Marker extent\n```{r PAICS_ext_max}\nx <- DF$PAICS_ext_max\ng_nice(x, bin = 10)\ntbl_nice(x)\n```\n\n#### Marker intensity\n```{r PAICS_int_max}\nx <- factor(DF$PAICS_int_max)\ng_nice(x)\ntbl_nice(x)\n```\n\n#### Marker H-score\n```{r PAICS_h_max}\nx <- DF$PAICS_h_max\ng_nice(x, bin = 25)\ntbl_nice(x)\n```\n",
+    "created" : 1499193011517.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3161794669",
+    "id" : "76AC0F54",
+    "lastKnownWriteTime" : 1499193202,
+    "last_content_update" : 1499193202645,
+    "path" : "D:/OneDrive/research-files/data-analysis/soory-Bladder/Report/descriptive_marker.Rmd",
+    "project_path" : "descriptive_marker.Rmd",
+    "properties" : {
+        "chunk_output_type" : "console"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

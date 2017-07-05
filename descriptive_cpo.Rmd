@@ -1,0 +1,187 @@
+```{r Global, echo=FALSE, warning=FALSE, message=FALSE}
+source("Global.R")
+```
+
+\   
+
+# Clinicopathologic and outcome features {.tabset .tabset-pills .tabset-fade}
+## Clinical features {.tabset .tabset-pills .tabset-fade}
+### Age
+```{r age}
+x <- DF$age
+g_nice(x, max_break = 90)
+tbl_nice(x)
+```
+
+### Sex
+```{r sex}
+x <- DF$sex
+g_nice(x)
+tbl_nice(x)
+```
+
+### Race
+```{r race}
+x <- DF$race
+g_nice(x)
+tbl_nice(x)
+```
+
+## Pathologic features {.tabset .tabset-pills .tabset-fade}
+### Diagnosis
+```{r spot_dx}
+x <- DF$spot_dx
+g_nice(x)
+tbl_nice(x)
+```
+
+### pT stage
+```{r stage_pt}
+x <- DF$stage_pt
+g_nice(x)
+tbl_nice(x)
+```
+
+### Clinical stage
+```{r stage_clinical}
+x <- DF$stage_clinical
+g_nice(x)
+tbl_nice(x)
+```
+
+### Histologic grade
+```{r grade}
+x <- DF$grade
+g_nice(x)
+tbl_nice(x)
+```
+
+### CIS
+```{r cis}
+x <- DF$cis
+g_nice(x)
+tbl_nice(x)
+```
+
+### Lymphovascular invasion
+```{r lvi}
+x <- DF$lvi
+g_nice(x)
+tbl_nice(x)
+```
+
+### Lymph node metastasis
+```{r metastasis_lymphnodes}
+x <- DF$metastasis_lymphnodes
+g_nice(x)
+tbl_nice(x)
+```
+
+## Preoperative features {.tabset .tabset-pills .tabset-fade}
+### Preop CIS
+```{r preop_cis}
+x <- DF$preop_cis
+g_nice(x)
+tbl_nice(x)
+```
+
+### Preop procedure
+```{r preop_procedure}
+x <- DF$preop_procedure
+g_nice(x)
+tbl_nice(x)
+```
+
+### Preop stage
+```{r preop_stage}
+x <- DF$preop_stage
+g_nice(x)
+tbl_nice(x)
+```
+
+## Treatment features {.tabset .tabset-pills .tabset-fade}
+### Preop RTx
+```{r preop_rtx}
+x <- DF$preop_rtx
+g_nice(x)
+tbl_nice(x)
+```
+
+### Preop CTx
+```{r preop_chemo}
+x <- DF$preop_chemo
+g_nice(x)
+tbl_nice(x)
+```
+
+### Intravesical CTx
+```{r intravesical_chemo}
+x <- DF$intravesical_chemo
+g_nice(x)
+tbl_nice(x)
+```
+
+### Intravesical CTx type
+```{r intravesical_chemo_type}
+x <- DF$intravesical_chemo_type
+g_nice(x)
+tbl_nice(x)
+```
+
+### Postop RTx
+```{r postop_rtx}
+x <- DF$postop_rtx
+g_nice(x)
+tbl_nice(x)
+```
+
+### Postop CTx
+```{r postop_chemo}
+x <- DF$postop_chemo
+g_nice(x)
+tbl_nice(x)
+```
+
+### Postop CTx type
+```{r postop_chemo_type}
+x <- DF$postop_chemo_type
+g_nice(x)
+tbl_nice(x)
+```
+
+## Outcome features {.tabset .tabset-pills .tabset-fade}
+### Follow-up, in months
+```{r fu_mo}
+x <- DF$fu_mo
+g_nice(x, bin = 24, max_break = 216)
+tbl_nice(x)
+```
+
+### Tumor progression
+```{r progression}
+x <- DF$progression
+g_nice(x)
+tbl_nice(x)
+```
+
+### Visceral metastasis
+```{r metastasis_visceral}
+x <- DF$metastasis_visceral
+g_nice(x)
+tbl_nice(x)
+```
+
+### Overall mortality
+```{r dead}
+x <- DF$dead
+g_nice(x)
+tbl_nice(x)
+```
+
+### Cancer-related mortality
+```{r dod}
+x <- DF$dod
+g_nice(x)
+tbl_nice(x)
+```
+
