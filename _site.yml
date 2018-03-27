@@ -13,9 +13,11 @@ navbar:
       menu:
         - text: "Clinicopathologic features"
           href: descriptive_cpo.html
-        - text: "Marker expression features"
+        - text: "Marker expression features - TMA 674"
           href: descriptive_marker.html
-    - text: "Association analysis"
+        - text: "Marker expression features - TMA 672"
+          href: descriptive_marker_672.html
+    - text: "Association - TMA 674"
       menu:
         - text: "By median extent"
           href: association_ext_med.html
@@ -29,9 +31,29 @@ navbar:
           href: association_h_med.html
         - text: "By maximum H-score"
           href: association_h_max.html
-    - text: "Outcome analysis"
+    - text: "Association - TMA 672"
+      menu:
+        - text: "By median extent"
+          href: association_ext_med_672.html
+        - text: "By maximum extent"
+          href: association_ext_max_672.html
+        - text: "By median intensity"
+          href: association_int_med_672.html
+        - text: "By maximum intensity"
+          href: association_ext_max_672.html
+        - text: "By median H-score"
+          href: association_h_med_672.html
+        - text: "By maximum H-score"
+          href: association_h_max_672.html
+    - text: "Outcome - TMA 674"
       menu:
         - text: "Regression analysis"
           href: outcome_regression.html
         - text: "Survival curves"
           href: outcome_survival.html
+    - text: "Outcome - TMA 672"
+      menu:
+        - text: "Regression analysis"
+          href: outcome_regression_672.html
+        - text: "Survival curves"
+          href: outcome_survival_672.html

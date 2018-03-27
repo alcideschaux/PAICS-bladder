@@ -1,0 +1,60 @@
+```{r Global, echo=FALSE, warning=FALSE, message=FALSE}
+source("Global_672.R")
+DF <- DF %>% 
+  filter(spot_dx == "Invasive") %>% 
+  droplevels()
+
+FU <- DF$fu_mo
+
+predictors <- with(DF, list(
+  "High PAICS extent (>0)" = PAICS_ext_level_0,
+  "High PAICS extent (> median)" = PAICS_ext_level_med,
+  "High PAICS intensity (>0)" = PAICS_int_level_0,
+  "High PAICS intensity (> median)" = PAICS_int_level_med,
+  "High PAICS H-score (>0)" = PAICS_h_level_0,
+  "High PAICS H-score (> median)" = PAICS_h_level_med
+))
+
+varlabels <- names(predictors)
+
+```
+
+\   
+
+# Regression modelling - TMA 762 {.tabset .tabset-pills .tabset-fade}
+## Tumor progression
+```{r progression}
+outcome <- DF$progression
+tbl_logcox(outcome, FU, predictors, varlabels)
+```
+
+***
+
+## Overall mortality
+```{r dead}
+outcome <- DF$dead
+tbl_logcox(outcome, FU, predictors, varlabels)
+```
+
+## Cancer-related mortality
+```{r dod}
+outcome <- DF$dod
+predictors <- with(DF, list(
+  # "High PAICS extent (>0)" = PAICS_ext_level_0,
+  "High PAICS extent (> median)" = PAICS_ext_level_med,
+  # "High PAICS intensity (>0)" = PAICS_int_level_0,
+  "High PAICS intensity (> median)" = PAICS_int_level_med,
+  # "High PAICS H-score (>0)" = PAICS_h_level_0,
+  "High PAICS H-score (> median)" = PAICS_h_level_med
+))
+varlabels <- names(predictors)
+tbl_logcox(outcome, FU, predictors, varlabels)
+```
+
+**Note:** Evaluation of high PAICS extent (>0), intensity (>0), and H-score (>0) was not included due to lack of cases in the low category, as seen in the following tables.
+
+```{r}
+with(DF, tbl_nice(PAICS_ext_level_0, dod))
+with(DF, tbl_nice(PAICS_int_level_0, dod))
+with(DF, tbl_nice(PAICS_h_level_0, dod))
+```

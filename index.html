@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -187,13 +189,16 @@ $(document).ready(function () {
       <a href="descriptive_cpo.html">Clinicopathologic features</a>
     </li>
     <li>
-      <a href="descriptive_marker.html">Marker expression features</a>
+      <a href="descriptive_marker.html">Marker expression features - TMA 674</a>
+    </li>
+    <li>
+      <a href="descriptive_marker_672.html">Marker expression features - TMA 672</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Association analysis
+    Association - TMA 674
      
     <span class="caret"></span>
   </a>
@@ -220,7 +225,34 @@ $(document).ready(function () {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Outcome analysis
+    Association - TMA 672
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="association_ext_med_672.html">By median extent</a>
+    </li>
+    <li>
+      <a href="association_ext_max_672.html">By maximum extent</a>
+    </li>
+    <li>
+      <a href="association_int_med_672.html">By median intensity</a>
+    </li>
+    <li>
+      <a href="association_ext_max_672.html">By maximum intensity</a>
+    </li>
+    <li>
+      <a href="association_h_med_672.html">By median H-score</a>
+    </li>
+    <li>
+      <a href="association_h_max_672.html">By maximum H-score</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Outcome - TMA 674
      
     <span class="caret"></span>
   </a>
@@ -230,6 +262,21 @@ $(document).ready(function () {
     </li>
     <li>
       <a href="outcome_survival.html">Survival curves</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Outcome - TMA 672
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="outcome_regression_672.html">Regression analysis</a>
+    </li>
+    <li>
+      <a href="outcome_survival_672.html">Survival curves</a>
     </li>
   </ul>
 </li>
@@ -261,15 +308,18 @@ $(document).ready(function () {
 </div>
 <div id="data-analysis" class="section level1 tabset tabset-pills tabset-fade">
 <h1>Data analysis</h1>
-<p>Data analysis was carried out using 3 approaches: descriptive analysis, association analysis, and outcome analysis. Data was analyzed and plots were generated using R version 3.4.0 (2017-04-21) from the R Foundation for Statistical Computing (Vienna, Austria). R packages from the <a href="https://cran.r-project.org/web/packages/tidyverse/index.html">tidyverse</a> were extensively used.</p>
+<p>Data analysis was carried out using 3 approaches: descriptive analysis, association analysis, and outcome analysis. Data was analyzed and plots were generated using R version 3.4.2 (2017-09-28) from the R Foundation for Statistical Computing (Vienna, Austria). R packages from the <a href="https://cran.r-project.org/web/packages/tidyverse/index.html">tidyverse</a> were extensively used.</p>
 <ul>
-<li><strong>Last updated:</strong> Wed Jul 05 12:01:10 2017</li>
+<li><strong>Last updated:</strong> Tue Mar 27 10:46:33 2018</li>
 </ul>
 <p> </p>
+<div id="datasets" class="section level2">
+<h2>Datasets</h2>
+<p>Two datasets were evaluated, <strong>TMA 764</strong> including 24 patients and 143 spots and <strong>TMA 762</strong> including 23 patients and 130 spots. The analysis describes the <a href="descriptive_cpo.html">clinicopathologic, treatment and outcome</a> features corresponding to all patients included in the dataset.</p>
+</div>
 <div id="descriptive-analysis" class="section level2">
 <h2>Descriptive analysis</h2>
-<p>The analysis describes the <a href="descriptive_cpo.html">clinicopathologic, treatment and outcome</a> features corresponding to the 24 patients included in the dataset.</p>
-<p>The analysis also descibres the marker features as evaluated in the 143 TMA spots, including the extent (i.e., percentage of positive cells), intensity (absent, weak, moderate and strong intensity), and H-score. The H-score was estimated by multipling the extent (0–100%) by the intensity (0 for absent, 1 for weak, 2 for moderate and 3 for strong intensity), ranging from 0 to 300.</p>
+<p>The analysis also descibres the marker features as evaluated in the TMA spots, including the extent (i.e., percentage of positive cells), intensity (absent, weak, moderate and strong intensity), and H-score. The H-score was estimated by multipling the extent (0–100%) by the intensity (0 for absent, 1 for weak, 2 for moderate and 3 for strong intensity), ranging from 0 to 300.</p>
 <p>We describe marker features using two approaches: first, we describe the marker expression considering <a href="descriptive_marker.html">all TMA spots</a>; then, we summarized marker expression by cases (i.e., patients), using either the median or the maximum value of the considered feature.</p>
 <p>Categorical variables were described using frequency tables and barplots. Numerical variables were described using measurements of central tendency and dispersion, histograms, and density plots.</p>
 </div>

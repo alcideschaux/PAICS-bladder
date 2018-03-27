@@ -1,0 +1,142 @@
+```{r Global, echo=FALSE, warning=FALSE, message=FALSE}
+source("Global_672.R")
+DF <- DF %>% 
+  filter(spot_dx == "Invasive") %>% 
+  droplevels()
+
+FU <- DF$fu_mo
+
+```
+
+\   
+
+# Survival curves - TMA 672 {.tabset .tabset-pills .tabset-fade}
+## Tumor progression {.tabset .tabset-pills .tabset-fade}
+### By extent {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+```{r PAICS_ext_level_0.progression}
+outcome <- DF$progression
+status <- DF$PAICS_ext_level_0
+g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_ext_level_med.progression}
+status <- DF$PAICS_ext_level_med
+g_surv(FU, outcome, status)
+```
+
+### By intensity {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+```{r PAICS_int_level_0.progression}
+status <- DF$PAICS_int_level_0
+g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_int_level_med.progression}
+status <- DF$PAICS_int_level_med
+g_surv(FU, outcome, status)
+```
+
+### By H-score {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+```{r PAICS_h_level_0.progression}
+status <- DF$PAICS_h_level_0
+g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_h_level_med.progression}
+status <- DF$PAICS_h_level_med
+g_surv(FU, outcome, status)
+```
+
+## Overall mortality {.tabset .tabset-pills .tabset-fade}
+### By extent {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+```{r PAICS_ext_level_0.dead}
+outcome <- DF$dead
+status <- DF$PAICS_ext_level_0
+g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_ext_level_med.dead}
+status <- DF$PAICS_ext_level_med
+g_surv(FU, outcome, status)
+```
+
+### By intensity {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+```{r PAICS_int_level_0.dead}
+status <- DF$PAICS_int_level_0
+g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_int_level_med.dead}
+status <- DF$PAICS_int_level_med
+g_surv(FU, outcome, status)
+```
+
+### By H-score {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+```{r PAICS_h_level_0.dead}
+status <- DF$PAICS_h_level_0
+g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_h_level_med.dead}
+status <- DF$PAICS_h_level_med
+g_surv(FU, outcome, status)
+```
+
+## Cancer-related mortality {.tabset .tabset-pills .tabset-fade}
+### By extent {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+No plots could be generated due to the absence of cases in the low expression level.
+
+```{r PAICS_ext_level_0.dod}
+# outcome <- DF$dod
+# status <- DF$PAICS_ext_level_0
+# g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_ext_level_med.dod}
+status <- DF$PAICS_ext_level_med
+g_surv(FU, outcome, status)
+```
+
+### By intensity {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+No plots could be generated due to the absence of cases in the low expression level.
+
+```{r PAICS_int_level_0.dod}
+# status <- DF$PAICS_int_level_0
+# g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_int_level_med.dod}
+status <- DF$PAICS_int_level_med
+g_surv(FU, outcome, status)
+```
+
+### By H-score {.tabset .tabset-pills .tabset-fade}
+#### Cutoff point: 0
+No plots could be generated due to the absence of cases in the low expression level.
+
+```{r PAICS_h_level_0.dod}
+# status <- DF$PAICS_h_level_0
+# g_surv(FU, outcome, status)
+```
+
+#### Cutoff point: median
+```{r PAICS_h_level_med.dod}
+status <- DF$PAICS_h_level_med
+g_surv(FU, outcome, status)
+```
+

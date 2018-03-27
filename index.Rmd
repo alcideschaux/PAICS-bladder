@@ -1,8 +1,19 @@
 ```{r Global, echo=FALSE, warning=FALSE, message=FALSE}
 source("Global.R")
-DF <- DF %>% 
+DF_674 <- DF %>% 
   filter(spot_dx == "Invasive") %>% 
   droplevels()
+
+marker_674 <- marker
+
+source("Global_672.R")
+DF_672 <- DF %>% 
+  filter(spot_dx == "Invasive") %>% 
+  droplevels()
+
+marker_672 <- marker
+
+rm(DF, marker)
 
 ```
 
@@ -23,10 +34,11 @@ Data analysis was carried out using 3 approaches: descriptive analysis, associat
 
 \   
 
-## Descriptive analysis
-The analysis describes the [clinicopathologic, treatment and outcome](descriptive_cpo.html) features corresponding to the `r nrow(DF)` patients included in the dataset.
+## Datasets
+Two datasets were evaluated, **TMA 764** including `r nrow(DF_674)` patients and `r nrow(marker_674)` spots and **TMA 762** including `r nrow(DF_672)` patients and `r nrow(marker_672)` spots. The analysis describes the [clinicopathologic, treatment and outcome](descriptive_cpo.html) features corresponding to all patients included in the dataset.
 
-The analysis also descibres the marker features as evaluated in the `r nrow(marker)` TMA spots, including the extent (i.e., percentage of positive cells), intensity (absent, weak, moderate and strong intensity), and H-score. The H-score was estimated by multipling the extent (0--100%) by the intensity (0 for absent, 1 for weak, 2 for moderate and 3 for strong intensity), ranging from 0 to 300.
+## Descriptive analysis
+The analysis also descibres the marker features as evaluated in the TMA spots, including the extent (i.e., percentage of positive cells), intensity (absent, weak, moderate and strong intensity), and H-score. The H-score was estimated by multipling the extent (0--100%) by the intensity (0 for absent, 1 for weak, 2 for moderate and 3 for strong intensity), ranging from 0 to 300.
 
 We describe marker features using two approaches: first, we describe the marker expression considering [all TMA spots](descriptive_marker.html); then, we summarized marker expression by cases (i.e., patients), using either the median or the maximum value of the considered feature.
 

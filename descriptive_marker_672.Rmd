@@ -1,0 +1,75 @@
+```{r Global, echo=FALSE, warning=FALSE, message=FALSE}
+source("Global_672.R")
+```
+
+\   
+
+# Marker features {.tabset .tabset-pills .tabset-fade}
+## By TMA spots {.tabset .tabset-pills .tabset-fade}
+### Marker extent
+```{r PAICS_extent}
+x <- marker$PAICS_extent
+g_nice(x, bin = 10)
+tbl_nice(x)
+```
+
+### Marker intensity
+```{r PAICS_intensity}
+x <- marker$PAICS_intensity
+g_nice(x)
+tbl_nice(x)
+```
+
+### Marker H-score
+```{r PAICS_h}
+x <- marker$PAICS_h
+g_nice(x, bin = 25)
+tbl_nice(x)
+```
+
+***
+
+## By SP cases {.tabset .tabset-pills .tabset-fade}
+### Summarizing by the median value {.tabset .tabset-pills .tabset-fade}
+#### Marker extent
+```{r PAICS_ext_med}
+x <- DF$PAICS_ext_med
+g_nice(x, bin = 10)
+tbl_nice(x)
+```
+
+#### Marker intensity
+```{r PAICS_int_med}
+x <- factor(DF$PAICS_int_med)
+g_nice(x)
+tbl_nice(x)
+```
+
+#### Marker H-score
+```{r PAICS_h_med}
+x <- DF$PAICS_h_med
+g_nice(x, bin = 25)
+tbl_nice(x)
+```
+
+### Summarizing by the maximum value {.tabset .tabset-pills .tabset-fade}
+#### Marker extent
+```{r PAICS_ext_max}
+x <- DF$PAICS_ext_max
+g_nice(x, bin = 10)
+tbl_nice(x)
+```
+
+#### Marker intensity
+```{r PAICS_int_max}
+x <- factor(DF$PAICS_int_max)
+g_nice(x)
+tbl_nice(x)
+```
+
+#### Marker H-score
+```{r PAICS_h_max}
+x <- DF$PAICS_h_max
+g_nice(x, bin = 25)
+tbl_nice(x)
+```

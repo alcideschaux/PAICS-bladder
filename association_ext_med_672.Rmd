@@ -1,0 +1,111 @@
+```{r Global, echo=FALSE, warning=FALSE, message=FALSE}
+source("Global_672.R")
+DF <- DF %>% 
+  filter(spot_dx == "Invasive") %>% 
+  droplevels()
+
+x <- DF$PAICS_ext_med
+
+```
+
+\   
+
+# By median PAICS extent - TMA 672 {.tabset .tabset-pills .tabset-fade}
+## Clinical features {.tabset .tabset-pills .tabset-fade}
+### Age
+```{r age_group.marker}
+y <- DF$age_group
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Sex
+```{r sex.marker}
+y <- DF$sex
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Race
+```{r race.marker}
+y <- DF$race
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+## Pathologic features {.tabset .tabset-pills .tabset-fade}
+### Pathologic stage
+```{r stage_pt.marker}
+y <- DF$stage_pt
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Clinical stage
+```{r stage_clinical.marker}
+y <- DF$stage_clinical
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Adjacent CIS
+```{r cis.marker}
+y <- DF$cis
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Lymphovascular invasion
+```{r lvi.marker}
+y <- DF$lvi
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Lymph node metastasis
+```{r metastasis_lymphnodes.marker}
+y <- DF$metastasis_lymphnodes
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+## Outcome features {.tabset .tabset-pills .tabset-fade}
+### Tumor progression
+```{r progression.marker}
+y <- DF$progression
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Visceral metastasis
+```{r metastasis_visceral.marker}
+y <- DF$metastasis_visceral
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Overall mortality
+```{r dead.marker}
+y <- DF$dead
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
+
+### Cancer-related mortality
+```{r dod.marker}
+y <- DF$dod
+g2_nice(x, y)
+tbl_nice(x, y)
+tbl_test(x, y)
+```
